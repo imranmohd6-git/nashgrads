@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 6%;
+
+    background: rgba(5, 5, 5, 0.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.nav-instagram {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px 7%;
+}
+
+.small-text {
+    font-size: 11px;
+    letter-spacing: 3px;
+    opacity: 0.5;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 12vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    max-width: 900px;
+}
+
+.hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-top: 30px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 16px;
+}
+
+
+/* GLASS BUTTON */
+
+.glass-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    width: fit-content;
+
+    margin-top: 35px;
+    padding: 16px 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.15),
+        0 10px 30px rgba(0,0,0,0.3);
+
+    transition: 0.3s ease;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-3px);
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 110px 7%;
+}
+
+.section-heading h2 {
+    font-size: clamp(42px, 8vw, 80px);
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.section-heading > p:last-child {
+    margin-top: 20px;
+    color: rgba(255,255,255,0.5);
+    max-width: 500px;
+}
+
+
+/* SERVICES */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    margin-top: 60px;
+}
+
+.service-card {
+    padding: 30px;
+
+    min-height: 220px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.025)
+        );
+
+    border-radius: 22px;
+
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.25);
+}
+
+.service-card span {
+    font-size: 11px;
+    opacity: 0.4;
+}
+
+.service-card h3 {
+    margin-top: 55px;
+    font-size: 24px;
+}
+
+.service-card p {
+    margin-top: 10px;
+    color: rgba(255,255,255,0.5);
+}
+
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 60px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+
+    background: #111;
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    transition: 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* FORM */
+
+.requirements {
+    max-width: 1000px;
+}
+
+#orderForm {
+    margin-top: 60px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    color: rgba(255,255,255,0.65);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+
+    width: 100%;
+
+    padding: 18px;
+
+    color: #ffffff;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: rgba(255,255,255,0.5);
+
+    background: rgba(255,255,255,0.08);
+}
+
+.input-group textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.input-group select option {
+    background: #111;
+    color: #fff;
+}
+
+
+/* SUBMIT */
+
+.submit-button {
+
+    width: 100%;
+
+    padding: 18px 25px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.09);
+
+    color: #fff;
+
+    backdrop-filter: blur(15px);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+
+/* INSTAGRAM SECTION */
+
+.instagram-section {
+    text-align: center;
+
+    padding: 150px 7%;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.instagram-section h2 {
+    font-size: clamp(45px, 9vw, 90px);
+
+    letter-spacing: -4px;
+
+    line-height: 1;
+}
+
+.instagram-section p:not(.small-text) {
+    margin-top: 20px;
+
+    color: rgba(255,255,255,0.5);
+}
+
+
+/* FOOTER */
+
+footer {
+
+    padding: 60px 7%;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-logo {
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+footer a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: white;
+}
+
+.copyright {
+    margin-top: 50px;
+
+    font-size: 12px;
+
+    opacity: 0.4;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 190px;
+    }
+
+    .service-card h3 {
+        margin-top: 40px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        width: 30%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .instagram-section {
+        padding: 100px 6%;
+    }
+
+}
